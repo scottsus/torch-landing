@@ -33,6 +33,8 @@ const LinkContainer = styled.div`
   &:not(:last-child) {
     margin-right: 40px;
   }
+  border-radius: 10px;
+  overflow: hidden;
   transition: box-shadow 0.2s ease-in-out;
   &:hover {
     box-shadow: 0 0 60px -5px #2650e4;
@@ -44,7 +46,6 @@ const ButtonContainer = styled.button<{ backgroundColor: string }>`
   height: 64px;
   padding: 10px 30px;
   background-color: ${(props) => props.backgroundColor};
-  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
