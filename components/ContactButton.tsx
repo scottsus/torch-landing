@@ -1,6 +1,8 @@
+import Link from 'next/link';
 import styled from 'styled-components';
 
 interface ButtonProps {
+  url: string;
   iconUrl: string;
   text: string;
   textColor?: string;
@@ -8,18 +10,35 @@ interface ButtonProps {
 }
 
 export default function ContactButton({
+  url,
   iconUrl,
   text,
   textColor = '#fff',
   backgroundColor,
 }: ButtonProps) {
   return (
-    <ButtonContainer backgroundColor={backgroundColor}>
-      <Icon src={iconUrl} />
-      <Text color={textColor}>{text}</Text>
-    </ButtonContainer>
+    <LinkContainer>
+      <Link href={url} target="_blank">
+        <ButtonContainer backgroundColor={backgroundColor}>
+          <Icon src={iconUrl} />
+          <Text color={textColor}>{text}</Text>
+        </ButtonContainer>
+      </Link>
+    </LinkContainer>
   );
 }
+
+const LinkContainer = styled.div`
+  padding: 0;
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
+  transition: box-shadow 0.2s ease-in-out;
+  &:hover {
+    box-shadow: 0 0 60px -5px #2650e4;
+    color: red;
+  }
+`;
 
 const ButtonContainer = styled.button<{ backgroundColor: string }>`
   height: 64px;
@@ -29,14 +48,6 @@ const ButtonContainer = styled.button<{ backgroundColor: string }>`
   display: flex;
   justify-content: center;
   align-items: center;
-  &:not(:last-child) {
-    margin-right: 40px;
-  }
-  transition: box-shadow 0.2s ease-in-out;
-  &:hover {
-    box-shadow: 0 0 60px -5px #2650e4;
-    color: red;
-  }
 `;
 
 const Icon = styled.img`
