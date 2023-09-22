@@ -36,9 +36,19 @@ const FooterContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 450px) {
+    height: 180px;
+  }
 `;
 
 const Buttons = styled.div`
   display: flex;
   justify-content: space-around;
+
+  @media (max-width: 450px) {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
 `;

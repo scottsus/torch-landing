@@ -27,6 +27,12 @@ const ShellContainer = styled.div`
   background-color: #292f38;
   border-radius: 15px;
   box-shadow: 0 0 60px -15px #2650e4;
+
+  @media (max-width: 450px) {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+  }
 `;
 
 const Command = styled.p`
@@ -36,6 +42,10 @@ const Command = styled.p`
   color: #fff;
   &:not(:last-child) {
     margin-bottom: 5px;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 12px;
   }
 `;
 

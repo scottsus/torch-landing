@@ -37,6 +37,10 @@ const Title = styled.h1`
   font-size: 50px;
   font-weight: 500;
   margin-bottom: 20px;
+
+  @media (max-width: 450px) {
+    font-size: 24px;
+  }
 `;
 
 const Subtitle = styled.h4`
@@ -45,4 +49,9 @@ const Subtitle = styled.h4`
   color: #a3a9b2;
   width: 70%;
   margin-bottom: 80px;
+
+  @media (max-width: 450px) {
+    font-size: 12px;
+    width: 100%;
+  }
 `;

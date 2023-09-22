@@ -14,4 +14,8 @@ const NavbarContainer = styled.div`
   display: flex;
   align-items: center;
   border-bottom: 1px solid #30363d;
+
+  @media (max-width: 450px) {
+    height: 50px;
+  }
 `;
