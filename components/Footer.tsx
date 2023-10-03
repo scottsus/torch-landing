@@ -6,7 +6,7 @@ export default function Footer() {
     <FooterContainer>
       <Buttons>
         <ContactButton
-          url="https://github.com/scottsus/torch-landing"
+          url="https://github.com/scottsus/torch-cli"
           iconUrl="icons/github.svg"
           text="Open-Source"
           textColor="#000"
@@ -14,14 +14,13 @@ export default function Footer() {
         />
         <ContactButton
           // TODO: Update Discord Link
-          url="https://github.com/scottsus/torch-landing"
+          url="https://github.com/scottsus/torch-cli"
           iconUrl="icons/discord.svg"
           text="Join the community"
           backgroundColor="#404EED"
         />
         <ContactButton
-          // TODO: Update Twitter Link
-          url="https://github.com/scottsus/torch-landing"
+          url="https://twitter.com/susantoscott"
           iconUrl="icons/twitter.svg"
           text="Keep in touch"
           backgroundColor="#000"
